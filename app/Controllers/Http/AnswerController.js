@@ -7,7 +7,7 @@ class AnswerController {
         .with('question')
         .where({ user_id: params.user_id })
         .fetch()
-        return response.json(answer)
+        return response.status(201).json(answer)
     }
 
     async store ({request, response}) {
