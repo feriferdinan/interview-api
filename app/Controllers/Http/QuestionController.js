@@ -18,7 +18,7 @@ class QuestionController {
         try {
             const question = await Database.from('questions').where({ number: params.number })
             const countAll = await Question.query().count()
-            let question_count = countAll[0]['count(*)']
+            let question_count = countAll[0]['count()']
             if (!question) {
                 return response.status(404).json({"message": 'Resource not found'})
             }
