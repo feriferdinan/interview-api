@@ -30,5 +30,4 @@ Route.group(()=>{
 
   Route.post('answer', 'AnswerController.store')
   Route.get('answer/:user_id', 'AnswerController.show')
-
 }).prefix('api/v1')
