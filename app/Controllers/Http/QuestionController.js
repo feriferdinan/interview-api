@@ -24,7 +24,7 @@ class QuestionController {
             }
             return response.json({
                 question:question,
-                question_count:question_count
+                question_count:countAll
             })
         } catch (error) {
             return response.status(400).json({"message": 'failed'})
