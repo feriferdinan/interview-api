@@ -26,7 +26,7 @@ Route.group(()=>{
   Route.post('user','UserController.store')
   
   Route.get('questions', 'QuestionController.index')
-  Route.get('question/:number', 'QuestionController.show')
+  Route.get('question', 'QuestionController.show')
   Route.post('question', 'QuestionController.store')
 
   Route.post('answer', 'AnswerController.store')

@@ -14,9 +14,10 @@ class QuestionController {
 
         }
     }
-    async show ({params, response}) {
+    async show ({request,response}) {
         try {
-            const question = await Database.from('questions').where({ number: params.number })
+            const {number} = request.get('number')
+            const question = await Question.findBy({ number: number })
             const countAll = await Question.query().count()
             let question_count = countAll[0]['count']
             if (!question) {
